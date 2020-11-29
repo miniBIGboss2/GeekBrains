@@ -1,6 +1,8 @@
 ﻿using System;
 using LessonOneHomework.Tasks;
 
+// Костяков Дмитрий
+
 namespace LessonOneHomework
 {
     internal class Program
