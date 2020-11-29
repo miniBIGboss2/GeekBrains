@@ -10,21 +10,41 @@ namespace LessonOneHomework.Tasks
 {
     public static class TaskFour
     {
-        public static void SwapVariablesValue(int x, int y)
+        private static int _x;
+        private static int _y;
+        
+        public static void SwapVariablesValue()
         {
-            Console.Write(x + " ");
-            Console.WriteLine(y);
+            Console.WriteLine("Программа меняющая значения двух переменных.");
             
+            _x = GetX();
+            _y = GetY();
+            Swap();
+
+            Console.WriteLine($"Теперь Х равен {_x}, а Y равен {_y}.",_x, _y);
+        }
+        
+        private static int GetX()
+        {
+            Console.Write("Введите значение для X: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        private static int GetY()
+        {
+            Console.Write("Введите значение для Y: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        private static void Swap()
+        {
             // var temp = x;
             // x = y;
             // y = temp;
 
-            x += y;
-            y = x - y;
-            x -= y;
-            
-            Console.Write(x + " ");
-            Console.WriteLine(y);
+            _x += _y;
+            _y = _x - _y;
+            _x -= _y;
         }
     }
 }

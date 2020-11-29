@@ -11,13 +11,23 @@ namespace LessonOneHomework.Tasks
         public static void AskWeightAndHeight()
         {
             Console.WriteLine("Программа подсчета вашего индекса массы тела.");
-            Console.Write("Ваш вес: ");
-            var weight = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Ваш рост: ");
-            var height = Convert.ToDouble(Console.ReadLine());
+            
+            var weight = GetWeight();
+            var height = GetHeight();
 
             Console.WriteLine("Ваш ИМТ: "+ CalculateBmi(weight, height));
+        }
 
+        private static double GetWeight()
+        {
+            Console.Write("Введите ваш вес: ");
+            return Convert.ToDouble(Console.ReadLine());
+        }
+
+        private static double GetHeight()
+        {
+            Console.Write("Введите ваш рост: ");
+            return Convert.ToDouble(Console.ReadLine());
         }
 
         private static string CalculateBmi(double weight, double height)

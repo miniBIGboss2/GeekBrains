@@ -10,7 +10,7 @@ namespace LessonOneHomework
         public static void Main(string[] args)
         {
             //Задание №1
-            TaskOne.Questionary();
+            TaskOne.FillForm();
             
             //Задание №2 
             TaskTwo.AskWeightAndHeight();
@@ -19,7 +19,7 @@ namespace LessonOneHomework
             TaskThree.GetVariables();
             
             //Задание №4
-            TaskFour.SwapVariablesValue(10, 20);
+            TaskFour.SwapVariablesValue();
             
             //Задание №5
             TaskFive.ShowInfo();
