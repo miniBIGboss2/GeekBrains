@@ -12,8 +12,9 @@ namespace LessonTwoHomework
             // TaskOne.FindMinNumb(); //Задание №1
 
             // TaskTwo.HowManyDigitsInNumbers(); //Задание №2
-            
-            //TaskThree.SumOfOddPositiveNumbers(); //Задание №3
+
+            var taskThree = new SumOfOddPositiveNumbers();//Задание №3
+            taskThree.StartProgram();
 
             // TaskFour.AuthorizeUser(); //Задание №4
             

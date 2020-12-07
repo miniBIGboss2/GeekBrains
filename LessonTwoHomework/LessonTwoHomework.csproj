@@ -44,7 +44,7 @@
         <Compile Include="Tasks\TaskFour.cs" />
         <Compile Include="Tasks\TaskOne.cs" />
         <Compile Include="Tasks\TaskSix.cs" />
-        <Compile Include="Tasks\TaskThree.cs" />
+        <Compile Include="Tasks\SumOfOddPositiveNumbers.cs" />
         <Compile Include="Tasks\TaskTwo.cs" />
     </ItemGroup>
     <ItemGroup>
