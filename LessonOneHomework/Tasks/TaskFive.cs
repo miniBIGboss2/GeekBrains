@@ -13,6 +13,8 @@ namespace LessonOneHomework.Tasks
     {
         public static void ShowInfo()
         {
+            Console.WriteLine("Программа выводит имя, фамилию и город по центру экрана.");
+            
             var fullName = GetInfoName();
             var city = GetInfoCity();
             
