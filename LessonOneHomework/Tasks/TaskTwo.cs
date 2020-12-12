@@ -8,14 +8,18 @@ namespace LessonOneHomework.Tasks
 {
     public static class TaskTwo
     {
+        public static double UserWeight;
+        public static double UserHeight;
+        public static double UserBmi;
+        
         public static void AskWeightAndHeight()
         {
             Console.WriteLine("Программа подсчета вашего индекса массы тела.");
-            
-            var weight = GetWeight();
-            var height = GetHeight();
 
-            Console.WriteLine("Ваш ИМТ: "+ CalculateBmi(weight, height));
+            UserWeight = GetWeight();
+            UserHeight = GetHeight();
+            UserBmi = CalculateBmi(UserWeight, UserHeight);
+            Console.WriteLine($"Ваш ИМТ: {UserBmi}");
         }
 
         private static double GetWeight()
@@ -30,10 +34,7 @@ namespace LessonOneHomework.Tasks
             return Convert.ToDouble(Console.ReadLine());
         }
 
-        private static string CalculateBmi(double weight, double height)
-        {
-            var yourBmi = $"{(float) weight / (height * height) * 10000:0.##}";
-            return yourBmi;
-        }
+        private static double CalculateBmi(double weight, double height) => 
+            Math.Round((weight / (height * height) * 10000), 2);
     }
 }
