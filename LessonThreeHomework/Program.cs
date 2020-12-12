@@ -1,14 +1,19 @@
 ﻿//Костяков Дмитрий
 
+using System;
 using LessonThreeHomework.Tasks;
 
 namespace LessonThreeHomework
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            SumOfOddPositiveNumbersExtention.StartProgram(); //Задание №2
+            //SumOfOddPositiveNumbersExtention.StartProgram(); //Задание №2
+            
+            FractionClassTask.StartProgram(); //Задание №3
+
+            Console.ReadKey();
         }
     }
 }

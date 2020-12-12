@@ -40,6 +40,8 @@
     <ItemGroup>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Tasks\FractionClassTask.cs" />
+        <Compile Include="Tasks\Fractions.cs" />
         <Compile Include="Tasks\SumOfOddPositiveNumbersExtention.cs" />
     </ItemGroup>
     <ItemGroup>
