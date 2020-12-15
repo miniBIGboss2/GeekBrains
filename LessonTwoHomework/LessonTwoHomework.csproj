@@ -41,7 +41,7 @@
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Tasks\TaskFive.cs" />
-        <Compile Include="Tasks\TaskFour.cs" />
+        <Compile Include="Tasks\LoginPassword.cs" />
         <Compile Include="Tasks\TaskOne.cs" />
         <Compile Include="Tasks\TaskSix.cs" />
         <Compile Include="Tasks\SumOfOddPositiveNumbers.cs" />
