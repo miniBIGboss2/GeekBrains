@@ -7,22 +7,17 @@ namespace LessonOneHomework
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            //Задание №1
-            TaskOne.FillForm();
+            TaskOne.FillForm(); //Задача №1
             
-            //Задание №2 
-            TaskTwo.AskWeightAndHeight();
-
-            //Задание №3
-            TaskThree.GetVariables();
+            TaskTwo.AskWeightAndHeight(); //Задание №2 
             
-            //Задание №4
-            TaskFour.SwapVariablesValue();
+            TaskThree.GetVariables(); //Задание №3
             
-            //Задание №5
-            TaskFive.ShowInfo();
+            TaskFour.SwapVariablesValue(); //Задание №4
+            
+            TaskFive.ShowInfo(); //Задание №5
             
             Console.ReadKey();
         }
