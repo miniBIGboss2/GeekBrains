@@ -9,7 +9,9 @@ namespace LessonFourHomework
     {
         public static void Main()
         {
-            DivisiblePairs.StartProgram(); //Задание №1
+            // DivisiblePairs.StartProgram(); //Задание №1
+            
+            LoginPasswordInArray.StartProgram(); //Задание №3
             
             Console.ReadKey();
 
