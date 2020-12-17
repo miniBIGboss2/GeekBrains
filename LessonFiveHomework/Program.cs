@@ -9,7 +9,9 @@ namespace LessonFiveHomework
     {
         public static void Main(string[] args)
         {
-            CorrectLoginRegex.StartProgram();
+            // CorrectLoginRegex.StartProgram(); // Задание №1
+
+            Message.StartProgram(); // Задание №2
 
             Console.ReadKey();
         }
