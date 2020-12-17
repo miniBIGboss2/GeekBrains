@@ -18,19 +18,12 @@ namespace LessonFiveHomework.Tasks
         {
             const string rightLoginText = "Корректный логин.";
             const string wrongLoginText = "Не корректный логин.";
-            string userInput;
             bool isLoginCorrect;
             
             Console.Write("Программа проверяет логин на корректность.\nВведите свой логин: ");
 
-            try
-            { 
-                userInput = string.Concat((Console.ReadLine() ?? string.Empty).Where(c=> !char.IsWhiteSpace(c)));
-            }
-            catch (ArgumentNullException)
-            {
-                throw new ArgumentNullException("userInput", "Значение Логин не может быть пустым.");
-            }
+            var userInput = Console.ReadLine()?.Replace(" ", "");
+            if (userInput == string.Empty) throw new Exception("Значение Логин не может быть пустым.");
 
             // isLoginCorrect = NotRegexWay(userInput);
             isLoginCorrect = RegexWay(userInput);
