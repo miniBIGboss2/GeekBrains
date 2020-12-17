@@ -22,7 +22,7 @@ namespace LessonFiveHomework.Tasks
             
             Console.Write("Программа проверяет логин на корректность.\nВведите свой логин: ");
 
-            var userInput = Console.ReadLine()?.Replace(" ", "");
+            var userInput = Console.ReadLine();
             if (userInput == string.Empty) throw new Exception("Значение Логин не может быть пустым.");
 
             // isLoginCorrect = NotRegexWay(userInput);
@@ -37,6 +37,6 @@ namespace LessonFiveHomework.Tasks
             return char.IsLetter(input[0]) && input.All(char.IsLetterOrDigit);
         }
 
-        private static bool RegexWay(string input) => Regex.IsMatch(input, @"^[^0-9][a-zA-Z0-9]+$");
+        private static bool RegexWay(string input) => Regex.IsMatch(input, @"^[^0-9\s][a-zA-Z0-9]+$");
     }
 }
