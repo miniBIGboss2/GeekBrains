@@ -28,17 +28,13 @@ namespace LessonSixHomework.Tasks
         
         private static void SaveFunc(string fileName, double x, double a, double endOfRange, Func<double, double, double> function)
         {
-            var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-            var bw = new BinaryWriter(fs);
-
-            while (x <= endOfRange)
-            {
-                bw.Write(function(x, a));
-                x += 0.5; // x=x+step;
-            }
-
-            bw.Close();
-            fs.Close();
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write))
+            using (var bw = new BinaryWriter(fs))
+                while (x <= endOfRange)
+                {
+                    bw.Write(function(x, a));
+                    x += 0.5;
+                }
         }
 
         private static double CustomFuncOne(double x, double a) => x * x - 50 * x + 10;
@@ -49,19 +45,16 @@ namespace LessonSixHomework.Tasks
 
         private static double Load(string fileName)
         {
-            var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            var bw = new BinaryReader(fs);
             var min = double.MaxValue;
-            double d;
-            
-            for (var i = 0; i < fs.Length / sizeof(double); i++)
-            {
-                d = bw.ReadDouble();
-                if (d < min) min = d;
-            }
 
-            bw.Close();
-            fs.Close();
+            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            using (var bw = new BinaryReader(fs))
+                for (var i = 0; i < fs.Length / sizeof(double); i++)
+                {
+                    var d = bw.ReadDouble();
+                    if (d < min) min = d;
+                }
+
             return min;
         }
     }
