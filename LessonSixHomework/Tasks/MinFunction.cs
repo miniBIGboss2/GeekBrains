@@ -11,25 +11,22 @@ namespace LessonSixHomework.Tasks
 {
     public static class MinFunction
     {
-        
-        public delegate double Function(double x, double a);
-        
         public static void StartProgram()
         {
-            SaveFunc("data.bin", -100, 0,100, CustomFuncOne);
-            
+            Func<double, double, double> delegate1 = CustomFuncOne;
+            SaveFunc("data.bin", -100, 0,100, delegate1);
             Console.WriteLine(Load("data.bin"));
-            
-            SaveFunc("data.bin", 3, -2,100, CustomFuncTwo);
-            
+
+            Func<double, double, double> delegate2 = CustomFuncTwo;
+            SaveFunc("data.bin", 3, -2,100, delegate2);
             Console.WriteLine(Load("data.bin"));
-            
-            SaveFunc("data.bin", -100, 100,100, Sinus);
-            
+
+            Func<double, double, double> delegate3 = Sinus;
+            SaveFunc("data.bin", -100, 100,100, delegate3);
             Console.WriteLine(Load("data.bin"));
         }
         
-        private static void SaveFunc(string fileName, double x, double a, double endOfRange, Function function)
+        private static void SaveFunc(string fileName, double x, double a, double endOfRange, Func<double, double, double> function)
         {
             var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
             var bw = new BinaryWriter(fs);
