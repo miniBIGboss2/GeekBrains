@@ -16,7 +16,7 @@ namespace LessonTwoHomework
             var taskThree = new SumOfOddPositiveNumbers(); //Задание №3
             taskThree.StartProgram();
 
-            // TaskFour.AuthorizeUser(); //Задание №4
+            // LoginPassword.AuthorizeUser(); //Задание №4
             
             // TaskFive.GiveAdviceAboutWeight(); //Задание №5
             

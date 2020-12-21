@@ -10,7 +10,7 @@ using System;
 
 namespace LessonTwoHomework.Tasks
 {
-    public static class TaskFour
+    public static class LoginPassword
     {
         private const string UserLogin = "root";
         private const string UserPassword = "GeekBrains";
