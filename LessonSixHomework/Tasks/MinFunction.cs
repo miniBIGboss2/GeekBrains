@@ -28,12 +28,14 @@ namespace LessonSixHomework.Tasks
         
         private static void SaveFunc(string fileName, double x, double a, double endOfRange, Func<double, double, double> function)
         {
+            var step = 0.5;
+            
             using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write))
             using (var bw = new BinaryWriter(fs))
                 while (x <= endOfRange)
                 {
                     bw.Write(function(x, a));
-                    x += 0.5;
+                    x += step;
                 }
         }
 
