@@ -40,7 +40,9 @@
     <ItemGroup>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Tasks\ExampleUsingCollections.cs" />
         <Compile Include="Tasks\MinFunction.cs" />
+        <Compile Include="Tasks\Student.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
