@@ -11,6 +11,8 @@ namespace LessonSixHomework
         {
             MinFunction.StartProgram(); // Задание №1 и №2
 
+            ExampleUsingCollections.StartProgram();//Задание №3
+
             Console.ReadKey();
         }
     }
