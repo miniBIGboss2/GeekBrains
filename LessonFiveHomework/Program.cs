@@ -11,7 +11,9 @@ namespace LessonFiveHomework
         {
             // CorrectLoginRegex.StartProgram(); // Задание №1
 
-            Message.StartProgram(); // Задание №2
+            // Message.StartProgram(); // Задание №2
+
+            CompareStrings.StartProgram(); // Задагие №3
 
             Console.ReadKey();
         }
